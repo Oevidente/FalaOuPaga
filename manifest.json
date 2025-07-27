@@ -1,0 +1,14 @@
+{
+  "name": "Fala ou Paga",
+  "short_name": "FalaPaga",
+  "description": "Jogo de cartas Fala ou Paga – faça perguntas ou pague um desafio!",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "version": "1.0.0",
+  "author": "Oevidente",
+  "license": "MIT",
+  "homepage": "https://example.com/fala-ou-paga"
+}
