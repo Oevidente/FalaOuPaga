@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fala ou Paga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <!-- Manifest para PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#333333">
+
+</head>
+
+<body>
+  <!-- Tela Inicial -->
+  <div id="start-screen">
+    <h1>Fala ou Paga</h1>
+    <button id="startBtn">Iniciar Jogo</button>
+    <button id="rulesBtn">Regras</button>
+  </div>
+
+  <!-- Tela de Regras (inicialmente escondida) -->
+  <div id="rules-screen" style="display:none">
+    <h2>Regras do Jogo</h2>
+    <p>1. Objetivo:<br></b>
+      Criar um ambiente divertido e desinibido, em que os participantes se desafiem a responder perguntas ou cumpram punições criativas.:<br></b>
+
+      2. Componentes:<br></b>
+
+      Baralho de cartas vermelhas (contém as perguntas principais)<br></b>
+
+      1 carta prateada por rodada (pergunta livre)<br></b>
+
+      Baralho de cartas douradas (desafios/punições)<br></b>
+
+      3. Preparação:<br></b>
+
+      Embaralhe bem o baralho vermelho.<br></b>
+
+      Insira aleatoriamente, entre as vermelhas, uma carta prateada.<br></b>
+
+      Deixe o baralho dourado separado, virado para baixo.<br></b>
+
+      4. Como Jogar:<br></b>
+
+      O jogador da vez puxa a primeira carta vermelha.<br></b>
+
+      Se for vermelha, lê em voz alta a pergunta e faz ao outro participante.<br></b>
+
+      Se for prateada, o jogador escolhe qualquer pergunta que quiser (pergunta livre).<br></b>
+
+      O outro participante responde ou recusa.<br></b>
+
+      5. Recusa de Resposta:<br></b>
+
+      Se o questionado se recusar a responder, o questionador deve puxar uma carta dourada e cumprir o desafio indicado.<br></b>
+
+      Se quem puxou a carta (a vez) se sentir tímido ou não quiser fazer a pergunta, o outro jogador puxa uma carta dourada e realiza o desafio.<br></b>
+
+      6. Cartas de Desafio (Douradas):<br></b>
+      Cada carta dourada traz uma punição criativa.</p>
+    <button id="backToStartBtn">Voltar</button>
+  </div>
+
+  <!-- Tela de Jogo -->
+  <div id="game-screen" style="display:none">
+    <!-- Botão de sair (voltar para a tela inicial) -->
+    <button id="exitBtn" class="exit-btn">← Sair</button>
+
+    <!-- Container para o efeito flip da carta -->
+    <div class="flip-card">
+      <div class="flip-card-inner" id="card-inner">
+        <!-- Frente da carta (verso) -->
+        <div class="front">
+          <!-- Imagem do verso da carta -->
+          <img id="front-image" src="cards/verso/verso.png" alt="Verso da carta">
+        </div>
+        <!-- Verso da carta (conteúdo da carta sorteada) -->
+        <div class="back">
+          <!-- Será preenchido dinamicamente via JavaScript -->
+          <img id="back-image" alt="Carta sorteada">
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões de ação -->
+    <button id="sortearCartaBtn">Sortear Carta</button>
+    <button id="sortearDesafioBtn" style="display:none">Sortear Desafio</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
